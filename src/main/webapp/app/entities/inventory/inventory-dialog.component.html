@@ -1,0 +1,82 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myInventoryLabel" jhiTranslate="inventoryApp.inventory.home.createOrEditLabel">Create or edit a Inventory</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!inventory.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="inventory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.entryDate" for="field_entryDate">Entry Date</label>
+            <div class="d-flex">
+                <input id="field_entryDate" type="datetime-local" class="form-control" name="entryDate" [(ngModel)]="inventory.entryDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.exitDate" for="field_exitDate">Exit Date</label>
+            <div class="d-flex">
+                <input id="field_exitDate" type="datetime-local" class="form-control" name="exitDate" [(ngModel)]="inventory.exitDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.customerName" for="field_customerName">Customer Name</label>
+            <input type="text" class="form-control" name="customerName" id="field_customerName"
+                [(ngModel)]="inventory.customerName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.wnet" for="field_wnet">Wnet</label>
+            <input type="number" class="form-control" name="wnet" id="field_wnet"
+                [(ngModel)]="inventory.wnet" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.num" for="field_num">Num</label>
+            <input type="number" class="form-control" name="num" id="field_num"
+                [(ngModel)]="inventory.num" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.warehouse" for="field_warehouse">Warehouse</label>
+            <select class="form-control" id="field_warehouse" name="warehouse" [(ngModel)]="inventory.warehouse">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="warehouseOption.id === inventory.warehouse?.id ? inventory.warehouse : warehouseOption" *ngFor="let warehouseOption of warehouses; trackBy: trackWarehouseById">{{warehouseOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.steelPipe" for="field_steelPipe">Steel Pipe</label>
+            <select class="form-control" id="field_steelPipe" name="steelPipe" [(ngModel)]="inventory.steelPipe">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="steelPipeOption.id === inventory.steelPipe?.id ? inventory.steelPipe : steelPipeOption" *ngFor="let steelPipeOption of steelpipes; trackBy: trackSteelPipeById">{{steelPipeOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" [(ngModel)]="inventory.customer">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="customerOption.id === inventory.customer?.id ? inventory.customer : customerOption" *ngFor="let customerOption of customers; trackBy: trackCustomerById">{{customerOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="inventoryApp.inventory.inventoryReport" for="field_inventoryReport">Inventory Report</label>
+            <select class="form-control" id="field_inventoryReport" name="inventoryReport" [(ngModel)]="inventory.inventoryReport" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="inventoryReportOption.id === inventory.inventoryReport?.id ? inventory.inventoryReport : inventoryReportOption" *ngFor="let inventoryReportOption of inventoryreports; trackBy: trackInventoryReportById">{{inventoryReportOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

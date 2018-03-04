@@ -1,0 +1,66 @@
+
+<div *ngIf="inventory">
+    <h2><span jhiTranslate="inventoryApp.inventory.detail.title">Inventory</span> {{inventory.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="inventoryApp.inventory.entryDate">Entry Date</span></dt>
+        <dd>
+            <span>{{inventory.entryDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.exitDate">Exit Date</span></dt>
+        <dd>
+            <span>{{inventory.exitDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.customerName">Customer Name</span></dt>
+        <dd>
+            <span>{{inventory.customerName}}</span>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.wnet">Wnet</span></dt>
+        <dd>
+            <span>{{inventory.wnet}}</span>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.num">Num</span></dt>
+        <dd>
+            <span>{{inventory.num}}</span>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.warehouse">Warehouse</span></dt>
+        <dd>
+            <div *ngIf="inventory.warehouse">
+                <a [routerLink]="['/warehouse', inventory.warehouse?.id]">{{inventory.warehouse?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.steelPipe">Steel Pipe</span></dt>
+        <dd>
+            <div *ngIf="inventory.steelPipe">
+                <a [routerLink]="['/steel-pipe', inventory.steelPipe?.id]">{{inventory.steelPipe?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.customer">Customer</span></dt>
+        <dd>
+            <div *ngIf="inventory.customer">
+                <a [routerLink]="['/customer', inventory.customer?.id]">{{inventory.customer?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="inventoryApp.inventory.inventoryReport">Inventory Report</span></dt>
+        <dd>
+            <div *ngIf="inventory.inventoryReport">
+                <a [routerLink]="['/inventory-report', inventory.inventoryReport?.id]">{{inventory.inventoryReport?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'inventory/'+ inventory.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,52 @@
+entity Warehouse {
+	name String,
+    description String,
+    address String
+    
+}
+
+entity Customer {
+	name String,
+    code String,
+    description String,
+    
+}
+
+entity SteelPipe {
+	name String,
+    type String,
+    thickness Double
+}
+
+entity Inventory {
+	entryDate Instant,
+    exitDate Instant,
+    customerName String,
+    wnet Double,
+    num Integer
+}
+
+entity InventoryReport {
+	steelPipeType String,
+    thickness String,
+    num Integer
+}
+
+
+relationship OneToOne {
+	Inventory{warehouse} to Warehouse,
+    Inventory{steelPipe} to SteelPipe,
+    Inventory{customer} to Customer
+}
+
+
+// defining multiple oneToOne relationships
+relationship OneToMany {
+	InventoryReport{inventories} to Inventory
+}
+
+// Set pagination options
+paginate Inventory, SteelPipe, Warehouse with pagination
+// Set service options to all except few
+service all with serviceImpl
+

@@ -1,0 +1,25 @@
+
+{
+    "inventoryApp": {
+        "inventoryReport" : {
+            "home": {
+                "title": "Inventory Reports",
+                "createLabel": "Create a new Inventory Report",
+                "createOrEditLabel": "Create or edit a Inventory Report"
+            },
+            "created": "A new Inventory Report is created with identifier {{ param }}",
+            "updated": "A Inventory Report is updated with identifier {{ param }}",
+            "deleted": "A Inventory Report is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Inventory Report {{ id }}?"
+            },
+            "detail": {
+                "title": "Inventory Report"
+            },
+            "steelPipeType": "Steel Pipe Type",
+            "thickness": "Thickness",
+            "num": "Num",
+            "inventories": "Inventories"
+        }
+    }
+}

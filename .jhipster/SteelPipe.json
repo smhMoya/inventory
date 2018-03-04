@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "thickness",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180227120025",
+    "entityTableName": "steel_pipe",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

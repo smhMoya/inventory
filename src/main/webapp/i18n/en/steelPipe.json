@@ -1,0 +1,24 @@
+
+{
+    "inventoryApp": {
+        "steelPipe" : {
+            "home": {
+                "title": "Steel Pipes",
+                "createLabel": "Create a new Steel Pipe",
+                "createOrEditLabel": "Create or edit a Steel Pipe"
+            },
+            "created": "A new Steel Pipe is created with identifier {{ param }}",
+            "updated": "A Steel Pipe is updated with identifier {{ param }}",
+            "deleted": "A Steel Pipe is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Steel Pipe {{ id }}?"
+            },
+            "detail": {
+                "title": "Steel Pipe"
+            },
+            "name": "Name",
+            "type": "Type",
+            "thickness": "Thickness"
+        }
+    }
+}

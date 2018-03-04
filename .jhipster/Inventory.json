@@ -1,0 +1,63 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "warehouse",
+            "otherEntityName": "warehouse",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "inventory"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "steelPipe",
+            "otherEntityName": "steelPipe",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "inventory"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "inventory"
+        },
+        {
+            "relationshipName": "inventoryReport",
+            "otherEntityName": "inventoryReport",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "entryDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "exitDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "customerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "wnet",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "num",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180227120026",
+    "entityTableName": "inventory",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "inventories",
+            "otherEntityName": "inventory",
+            "otherEntityRelationshipName": "inventoryReport"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "steelPipeType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "thickness",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "num",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180227120027",
+    "entityTableName": "inventory_report",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

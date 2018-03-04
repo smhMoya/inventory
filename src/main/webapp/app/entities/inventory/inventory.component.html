@@ -1,0 +1,98 @@
+<div>
+    <h2>
+        <span jhiTranslate="inventoryApp.inventory.home.title">Inventories</span>
+        <button class="btn btn-primary float-right jh-create-entity create-inventory" [routerLink]="['/', { outlets: { popup: ['inventory-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="inventoryApp.inventory.home.createLabel">
+            Create new Inventory
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="inventories">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="entryDate"><span jhiTranslate="inventoryApp.inventory.entryDate">Entry Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="exitDate"><span jhiTranslate="inventoryApp.inventory.exitDate">Exit Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="customerName"><span jhiTranslate="inventoryApp.inventory.customerName">Customer Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="wnet"><span jhiTranslate="inventoryApp.inventory.wnet">Wnet</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="num"><span jhiTranslate="inventoryApp.inventory.num">Num</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="warehouse.id"><span jhiTranslate="inventoryApp.inventory.warehouse">Warehouse</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="steelPipe.id"><span jhiTranslate="inventoryApp.inventory.steelPipe">Steel Pipe</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="customer.id"><span jhiTranslate="inventoryApp.inventory.customer">Customer</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="inventoryReport.id"><span jhiTranslate="inventoryApp.inventory.inventoryReport">Inventory Report</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let inventory of inventories ;trackBy: trackId">
+                <td><a [routerLink]="['../inventory', inventory.id ]">{{inventory.id}}</a></td>
+                <td>{{inventory.entryDate | date:'medium'}}</td>
+                <td>{{inventory.exitDate | date:'medium'}}</td>
+                <td>{{inventory.customerName}}</td>
+                <td>{{inventory.wnet}}</td>
+                <td>{{inventory.num}}</td>
+                <td>
+                    <div *ngIf="inventory.warehouse">
+                        <a [routerLink]="['../warehouse', inventory.warehouse?.id ]" >{{inventory.warehouse?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="inventory.steelPipe">
+                        <a [routerLink]="['../steel-pipe', inventory.steelPipe?.id ]" >{{inventory.steelPipe?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="inventory.customer">
+                        <a [routerLink]="['../customer', inventory.customer?.id ]" >{{inventory.customer?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="inventory.inventoryReport">
+                        <a [routerLink]="['../inventory-report', inventory.inventoryReport?.id ]" >{{inventory.inventoryReport?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../inventory', inventory.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'inventory/'+ inventory.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'inventory/'+ inventory.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="inventories && inventories.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

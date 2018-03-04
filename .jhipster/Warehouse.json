@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180227120023",
+    "entityTableName": "warehouse",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}
