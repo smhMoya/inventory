@@ -1,20 +1,20 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 
-import { InventorySharedModule } from '../../shared';
+import {InventorySharedModule} from "../../shared";
 import {
-    InventoryService,
-    InventoryPopupService,
     InventoryComponent,
+    InventoryDeleteDialogComponent,
+    InventoryDeletePopupComponent,
     InventoryDetailComponent,
     InventoryDialogComponent,
     InventoryPopupComponent,
-    InventoryDeletePopupComponent,
-    InventoryDeleteDialogComponent,
-    inventoryRoute,
     inventoryPopupRoute,
+    InventoryPopupService,
     InventoryResolvePagingParams,
-} from './';
+    inventoryRoute,
+    InventoryService
+} from "./";
 
 const ENTITY_STATES = [
     ...inventoryRoute,

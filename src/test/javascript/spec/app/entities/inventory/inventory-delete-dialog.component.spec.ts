@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs/Observable';
-import { JhiEventManager } from 'ng-jhipster';
+import {async, ComponentFixture, fakeAsync, inject, TestBed, tick} from "@angular/core/testing";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {Observable} from "rxjs/Observable";
+import {JhiEventManager} from "ng-jhipster";
 
-import { InventoryTestModule } from '../../../test.module';
-import { InventoryDeleteDialogComponent } from '../../../../../../main/webapp/app/entities/inventory/inventory-delete-dialog.component';
-import { InventoryService } from '../../../../../../main/webapp/app/entities/inventory/inventory.service';
+import {InventoryTestModule} from "../../../test.module";
+import {InventoryDeleteDialogComponent} from "../../../../../../main/webapp/app/entities/inventory/inventory-delete-dialog.component";
+import {InventoryService} from "../../../../../../main/webapp/app/entities/inventory/inventory.service";
 
 describe('Component Tests', () => {
 

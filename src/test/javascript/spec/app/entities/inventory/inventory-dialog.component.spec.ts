@@ -1,18 +1,18 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
-import { HttpResponse } from '@angular/common/http';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs/Observable';
-import { JhiEventManager } from 'ng-jhipster';
+import {async, ComponentFixture, fakeAsync, inject, TestBed, tick} from "@angular/core/testing";
+import {HttpResponse} from "@angular/common/http";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {Observable} from "rxjs/Observable";
+import {JhiEventManager} from "ng-jhipster";
 
-import { InventoryTestModule } from '../../../test.module';
-import { InventoryDialogComponent } from '../../../../../../main/webapp/app/entities/inventory/inventory-dialog.component';
-import { InventoryService } from '../../../../../../main/webapp/app/entities/inventory/inventory.service';
-import { Inventory } from '../../../../../../main/webapp/app/entities/inventory/inventory.model';
-import { WarehouseService } from '../../../../../../main/webapp/app/entities/warehouse';
-import { SteelPipeService } from '../../../../../../main/webapp/app/entities/steel-pipe';
-import { CustomerService } from '../../../../../../main/webapp/app/entities/customer';
-import { InventoryReportService } from '../../../../../../main/webapp/app/entities/inventory-report';
+import {InventoryTestModule} from "../../../test.module";
+import {InventoryDialogComponent} from "../../../../../../main/webapp/app/entities/inventory/inventory-dialog.component";
+import {InventoryService} from "../../../../../../main/webapp/app/entities/inventory/inventory.service";
+import {Inventory} from "../../../../../../main/webapp/app/entities/inventory/inventory.model";
+import {WarehouseService} from "../../../../../../main/webapp/app/entities/warehouse";
+import {SteelPipeService} from "../../../../../../main/webapp/app/entities/steel-pipe";
+import {CustomerService} from "../../../../../../main/webapp/app/entities/customer";
+import {InventoryReportService} from "../../../../../../main/webapp/app/entities/inventory-report";
 
 describe('Component Tests', () => {
 

@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {Observable} from "rxjs/Observable";
+import {HttpHeaders, HttpResponse} from "@angular/common/http";
 
-import { InventoryTestModule } from '../../../test.module';
-import { InventoryComponent } from '../../../../../../main/webapp/app/entities/inventory/inventory.component';
-import { InventoryService } from '../../../../../../main/webapp/app/entities/inventory/inventory.service';
-import { Inventory } from '../../../../../../main/webapp/app/entities/inventory/inventory.model';
+import {InventoryTestModule} from "../../../test.module";
+import {InventoryComponent} from "../../../../../../main/webapp/app/entities/inventory/inventory.component";
+import {InventoryService} from "../../../../../../main/webapp/app/entities/inventory/inventory.service";
+import {Inventory} from "../../../../../../main/webapp/app/entities/inventory/inventory.model";
 
 describe('Component Tests', () => {
 

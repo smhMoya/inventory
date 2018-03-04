@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
-import { JhiPaginationUtil } from 'ng-jhipster';
+import {Injectable} from "@angular/core";
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes} from "@angular/router";
+import {JhiPaginationUtil} from "ng-jhipster";
 
-import { UserRouteAccessService } from '../../shared';
-import { InventoryComponent } from './inventory.component';
-import { InventoryDetailComponent } from './inventory-detail.component';
-import { InventoryPopupComponent } from './inventory-dialog.component';
-import { InventoryDeletePopupComponent } from './inventory-delete-dialog.component';
+import {UserRouteAccessService} from "../../shared";
+import {InventoryComponent} from "./inventory.component";
+import {InventoryDetailComponent} from "./inventory-detail.component";
+import {InventoryPopupComponent} from "./inventory-dialog.component";
+import {InventoryDeletePopupComponent} from "./inventory-delete-dialog.component";
 
 @Injectable()
 export class InventoryResolvePagingParams implements Resolve<any> {

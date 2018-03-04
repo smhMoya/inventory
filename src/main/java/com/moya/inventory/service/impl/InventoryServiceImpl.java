@@ -1,10 +1,10 @@
 package com.moya.inventory.service.impl;
 
+import com.moya.inventory.domain.Inventory;
 import com.moya.inventory.domain.InventoryReport;
 import com.moya.inventory.repository.InventoryReportRepository;
-import com.moya.inventory.service.InventoryService;
-import com.moya.inventory.domain.Inventory;
 import com.moya.inventory.repository.InventoryRepository;
+import com.moya.inventory.service.InventoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;

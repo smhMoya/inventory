@@ -1,8 +1,8 @@
 package com.moya.inventory.service.impl;
 
-import com.moya.inventory.service.InventoryReportService;
 import com.moya.inventory.domain.InventoryReport;
 import com.moya.inventory.repository.InventoryReportRepository;
+import com.moya.inventory.service.InventoryReportService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

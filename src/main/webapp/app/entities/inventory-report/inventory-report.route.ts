@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
+import {Routes} from "@angular/router";
 
-import { UserRouteAccessService } from '../../shared';
-import { InventoryReportComponent } from './inventory-report.component';
-import { InventoryReportDetailComponent } from './inventory-report-detail.component';
-import { InventoryReportPopupComponent } from './inventory-report-dialog.component';
-import { InventoryReportDeletePopupComponent } from './inventory-report-delete-dialog.component';
+import {UserRouteAccessService} from "../../shared";
+import {InventoryReportComponent} from "./inventory-report.component";
+import {InventoryReportDetailComponent} from "./inventory-report-detail.component";
+import {InventoryReportPopupComponent} from "./inventory-report-dialog.component";
+import {InventoryReportDeletePopupComponent} from "./inventory-report-delete-dialog.component";
 
 export const inventoryReportRoute: Routes = [
     {

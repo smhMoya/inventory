@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {HttpResponse} from "@angular/common/http";
+import {Observable} from "rxjs/Observable";
 
-import { InventoryTestModule } from '../../../test.module';
-import { SteelPipeDetailComponent } from '../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe-detail.component';
-import { SteelPipeService } from '../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.service';
-import { SteelPipe } from '../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.model';
+import {InventoryTestModule} from "../../../test.module";
+import {SteelPipeDetailComponent} from "../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe-detail.component";
+import {SteelPipeService} from "../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.service";
+import {SteelPipe} from "../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.model";
 
 describe('Component Tests', () => {
 

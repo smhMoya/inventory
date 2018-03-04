@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnDestroy, OnInit} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
 
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {JhiEventManager} from "ng-jhipster";
 
-import { Warehouse } from './warehouse.model';
-import { WarehousePopupService } from './warehouse-popup.service';
-import { WarehouseService } from './warehouse.service';
+import {Warehouse} from "./warehouse.model";
+import {WarehousePopupService} from "./warehouse-popup.service";
+import {WarehouseService} from "./warehouse.service";
 
 @Component({
     selector: 'jhi-warehouse-delete-dialog',

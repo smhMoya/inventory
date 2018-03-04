@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {Observable} from "rxjs/Observable";
+import {HttpHeaders, HttpResponse} from "@angular/common/http";
 
-import { InventoryTestModule } from '../../../test.module';
-import { InventoryReportComponent } from '../../../../../../main/webapp/app/entities/inventory-report/inventory-report.component';
-import { InventoryReportService } from '../../../../../../main/webapp/app/entities/inventory-report/inventory-report.service';
-import { InventoryReport } from '../../../../../../main/webapp/app/entities/inventory-report/inventory-report.model';
+import {InventoryTestModule} from "../../../test.module";
+import {InventoryReportComponent} from "../../../../../../main/webapp/app/entities/inventory-report/inventory-report.component";
+import {InventoryReportService} from "../../../../../../main/webapp/app/entities/inventory-report/inventory-report.service";
+import {InventoryReport} from "../../../../../../main/webapp/app/entities/inventory-report/inventory-report.model";
 
 describe('Component Tests', () => {
 

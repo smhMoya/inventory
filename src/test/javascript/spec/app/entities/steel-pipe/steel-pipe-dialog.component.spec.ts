@@ -1,14 +1,14 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
-import { HttpResponse } from '@angular/common/http';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs/Observable';
-import { JhiEventManager } from 'ng-jhipster';
+import {async, ComponentFixture, fakeAsync, inject, TestBed, tick} from "@angular/core/testing";
+import {HttpResponse} from "@angular/common/http";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {Observable} from "rxjs/Observable";
+import {JhiEventManager} from "ng-jhipster";
 
-import { InventoryTestModule } from '../../../test.module';
-import { SteelPipeDialogComponent } from '../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe-dialog.component';
-import { SteelPipeService } from '../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.service';
-import { SteelPipe } from '../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.model';
+import {InventoryTestModule} from "../../../test.module";
+import {SteelPipeDialogComponent} from "../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe-dialog.component";
+import {SteelPipeService} from "../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.service";
+import {SteelPipe} from "../../../../../../main/webapp/app/entities/steel-pipe/steel-pipe.model";
 
 describe('Component Tests', () => {
 

@@ -1,9 +1,9 @@
-import { Injectable, Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { HttpResponse } from '@angular/common/http';
-import { InventoryReport } from './inventory-report.model';
-import { InventoryReportService } from './inventory-report.service';
+import {Component, Injectable} from "@angular/core";
+import {Router} from "@angular/router";
+import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
+import {HttpResponse} from "@angular/common/http";
+import {InventoryReport} from "./inventory-report.model";
+import {InventoryReportService} from "./inventory-report.service";
 
 @Injectable()
 export class InventoryReportPopupService {

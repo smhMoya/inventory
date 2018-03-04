@@ -1,8 +1,8 @@
 package com.moya.inventory.service.impl;
 
-import com.moya.inventory.service.WarehouseService;
 import com.moya.inventory.domain.Warehouse;
 import com.moya.inventory.repository.WarehouseRepository;
+import com.moya.inventory.service.WarehouseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;

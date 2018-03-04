@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
-import { JhiPaginationUtil } from 'ng-jhipster';
+import {Injectable} from "@angular/core";
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes} from "@angular/router";
+import {JhiPaginationUtil} from "ng-jhipster";
 
-import { UserRouteAccessService } from '../../shared';
-import { SteelPipeComponent } from './steel-pipe.component';
-import { SteelPipeDetailComponent } from './steel-pipe-detail.component';
-import { SteelPipePopupComponent } from './steel-pipe-dialog.component';
-import { SteelPipeDeletePopupComponent } from './steel-pipe-delete-dialog.component';
+import {UserRouteAccessService} from "../../shared";
+import {SteelPipeComponent} from "./steel-pipe.component";
+import {SteelPipeDetailComponent} from "./steel-pipe-detail.component";
+import {SteelPipePopupComponent} from "./steel-pipe-dialog.component";
+import {SteelPipeDeletePopupComponent} from "./steel-pipe-delete-dialog.component";
 
 @Injectable()
 export class SteelPipeResolvePagingParams implements Resolve<any> {

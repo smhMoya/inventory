@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpResponse } from '@angular/common/http';
-import { Subscription } from 'rxjs/Subscription';
-import { JhiEventManager } from 'ng-jhipster';
+import {Component, OnDestroy, OnInit} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
+import {HttpResponse} from "@angular/common/http";
+import {Subscription} from "rxjs/Subscription";
+import {JhiEventManager} from "ng-jhipster";
 
-import { SteelPipe } from './steel-pipe.model';
-import { SteelPipeService } from './steel-pipe.service';
+import {SteelPipe} from "./steel-pipe.model";
+import {SteelPipeService} from "./steel-pipe.service";
 
 @Component({
     selector: 'jhi-steel-pipe-detail',

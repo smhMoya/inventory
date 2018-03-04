@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {Observable} from "rxjs/Observable";
+import {HttpHeaders, HttpResponse} from "@angular/common/http";
 
-import { InventoryTestModule } from '../../../test.module';
-import { WarehouseComponent } from '../../../../../../main/webapp/app/entities/warehouse/warehouse.component';
-import { WarehouseService } from '../../../../../../main/webapp/app/entities/warehouse/warehouse.service';
-import { Warehouse } from '../../../../../../main/webapp/app/entities/warehouse/warehouse.model';
+import {InventoryTestModule} from "../../../test.module";
+import {WarehouseComponent} from "../../../../../../main/webapp/app/entities/warehouse/warehouse.component";
+import {WarehouseService} from "../../../../../../main/webapp/app/entities/warehouse/warehouse.service";
+import {Warehouse} from "../../../../../../main/webapp/app/entities/warehouse/warehouse.model";
 
 describe('Component Tests', () => {
 

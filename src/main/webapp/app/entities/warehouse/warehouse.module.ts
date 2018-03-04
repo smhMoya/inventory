@@ -1,20 +1,20 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 
-import { InventorySharedModule } from '../../shared';
+import {InventorySharedModule} from "../../shared";
 import {
-    WarehouseService,
-    WarehousePopupService,
     WarehouseComponent,
+    WarehouseDeleteDialogComponent,
+    WarehouseDeletePopupComponent,
     WarehouseDetailComponent,
     WarehouseDialogComponent,
     WarehousePopupComponent,
-    WarehouseDeletePopupComponent,
-    WarehouseDeleteDialogComponent,
-    warehouseRoute,
     warehousePopupRoute,
+    WarehousePopupService,
     WarehouseResolvePagingParams,
-} from './';
+    warehouseRoute,
+    WarehouseService
+} from "./";
 
 const ENTITY_STATES = [
     ...warehouseRoute,

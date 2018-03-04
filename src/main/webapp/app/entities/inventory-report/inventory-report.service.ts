@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { SERVER_API_URL } from '../../app.constants';
+import {Injectable} from "@angular/core";
+import {HttpClient, HttpResponse} from "@angular/common/http";
+import {Observable} from "rxjs/Observable";
+import {SERVER_API_URL} from "../../app.constants";
 
-import { InventoryReport } from './inventory-report.model';
-import { createRequestOption } from '../../shared';
+import {InventoryReport} from "./inventory-report.model";
+import {createRequestOption} from "../../shared";
 
 export type EntityResponseType = HttpResponse<InventoryReport>;
 

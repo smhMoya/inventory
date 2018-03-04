@@ -1,10 +1,10 @@
 /* tslint:disable max-line-length */
-import { TestBed, getTestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { JhiDateUtils } from 'ng-jhipster';
+import {getTestBed, TestBed} from "@angular/core/testing";
+import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
+import {JhiDateUtils} from "ng-jhipster";
 
-import { InventoryReportService } from '../../../../../../main/webapp/app/entities/inventory-report/inventory-report.service';
-import { SERVER_API_URL } from '../../../../../../main/webapp/app/app.constants';
+import {InventoryReportService} from "../../../../../../main/webapp/app/entities/inventory-report/inventory-report.service";
+import {SERVER_API_URL} from "../../../../../../main/webapp/app/app.constants";
 
 describe('Service Tests', () => {
 

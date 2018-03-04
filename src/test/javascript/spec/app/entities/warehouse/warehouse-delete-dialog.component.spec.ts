@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs/Observable';
-import { JhiEventManager } from 'ng-jhipster';
+import {async, ComponentFixture, fakeAsync, inject, TestBed, tick} from "@angular/core/testing";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {Observable} from "rxjs/Observable";
+import {JhiEventManager} from "ng-jhipster";
 
-import { InventoryTestModule } from '../../../test.module';
-import { WarehouseDeleteDialogComponent } from '../../../../../../main/webapp/app/entities/warehouse/warehouse-delete-dialog.component';
-import { WarehouseService } from '../../../../../../main/webapp/app/entities/warehouse/warehouse.service';
+import {InventoryTestModule} from "../../../test.module";
+import {WarehouseDeleteDialogComponent} from "../../../../../../main/webapp/app/entities/warehouse/warehouse-delete-dialog.component";
+import {WarehouseService} from "../../../../../../main/webapp/app/entities/warehouse/warehouse.service";
 
 describe('Component Tests', () => {
 

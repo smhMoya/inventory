@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnDestroy, OnInit} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
 
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {JhiEventManager} from "ng-jhipster";
 
-import { Inventory } from './inventory.model';
-import { InventoryPopupService } from './inventory-popup.service';
-import { InventoryService } from './inventory.service';
+import {Inventory} from "./inventory.model";
+import {InventoryPopupService} from "./inventory-popup.service";
+import {InventoryService} from "./inventory.service";
 
 @Component({
     selector: 'jhi-inventory-delete-dialog',

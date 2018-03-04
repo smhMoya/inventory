@@ -1,18 +1,18 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import {Component, OnDestroy, OnInit} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
+import {HttpErrorResponse, HttpResponse} from "@angular/common/http";
 
-import { Observable } from 'rxjs/Observable';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
+import {Observable} from "rxjs/Observable";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {JhiAlertService, JhiEventManager} from "ng-jhipster";
 
-import { Inventory } from './inventory.model';
-import { InventoryPopupService } from './inventory-popup.service';
-import { InventoryService } from './inventory.service';
-import { Warehouse, WarehouseService } from '../warehouse';
-import { SteelPipe, SteelPipeService } from '../steel-pipe';
-import { Customer, CustomerService } from '../customer';
-import { InventoryReport, InventoryReportService } from '../inventory-report';
+import {Inventory} from "./inventory.model";
+import {InventoryPopupService} from "./inventory-popup.service";
+import {InventoryService} from "./inventory.service";
+import {Warehouse, WarehouseService} from "../warehouse";
+import {SteelPipe, SteelPipeService} from "../steel-pipe";
+import {Customer, CustomerService} from "../customer";
+import {InventoryReport, InventoryReportService} from "../inventory-report";
 
 @Component({
     selector: 'jhi-inventory-dialog',

@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
+import {Routes} from "@angular/router";
 
-import { UserRouteAccessService } from '../../shared';
-import { CustomerComponent } from './customer.component';
-import { CustomerDetailComponent } from './customer-detail.component';
-import { CustomerPopupComponent } from './customer-dialog.component';
-import { CustomerDeletePopupComponent } from './customer-delete-dialog.component';
+import {UserRouteAccessService} from "../../shared";
+import {CustomerComponent} from "./customer.component";
+import {CustomerDetailComponent} from "./customer-detail.component";
+import {CustomerPopupComponent} from "./customer-dialog.component";
+import {CustomerDeletePopupComponent} from "./customer-delete-dialog.component";
 
 export const customerRoute: Routes = [
     {

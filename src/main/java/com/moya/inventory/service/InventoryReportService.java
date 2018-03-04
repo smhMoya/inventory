@@ -1,6 +1,7 @@
 package com.moya.inventory.service;
 
 import com.moya.inventory.domain.InventoryReport;
+
 import java.util.List;
 
 /**

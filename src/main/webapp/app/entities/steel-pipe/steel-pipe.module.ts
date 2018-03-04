@@ -1,20 +1,20 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 
-import { InventorySharedModule } from '../../shared';
+import {InventorySharedModule} from "../../shared";
 import {
-    SteelPipeService,
-    SteelPipePopupService,
     SteelPipeComponent,
+    SteelPipeDeleteDialogComponent,
+    SteelPipeDeletePopupComponent,
     SteelPipeDetailComponent,
     SteelPipeDialogComponent,
     SteelPipePopupComponent,
-    SteelPipeDeletePopupComponent,
-    SteelPipeDeleteDialogComponent,
-    steelPipeRoute,
     steelPipePopupRoute,
+    SteelPipePopupService,
     SteelPipeResolvePagingParams,
-} from './';
+    steelPipeRoute,
+    SteelPipeService
+} from "./";
 
 const ENTITY_STATES = [
     ...steelPipeRoute,

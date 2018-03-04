@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {Observable} from "rxjs/Observable";
+import {HttpHeaders, HttpResponse} from "@angular/common/http";
 
-import { InventoryTestModule } from '../../../test.module';
-import { CustomerComponent } from '../../../../../../main/webapp/app/entities/customer/customer.component';
-import { CustomerService } from '../../../../../../main/webapp/app/entities/customer/customer.service';
-import { Customer } from '../../../../../../main/webapp/app/entities/customer/customer.model';
+import {InventoryTestModule} from "../../../test.module";
+import {CustomerComponent} from "../../../../../../main/webapp/app/entities/customer/customer.component";
+import {CustomerService} from "../../../../../../main/webapp/app/entities/customer/customer.service";
+import {Customer} from "../../../../../../main/webapp/app/entities/customer/customer.model";
 
 describe('Component Tests', () => {
 

@@ -1,12 +1,10 @@
 package com.moya.inventory.web.rest;
 
 import com.moya.inventory.InventoryApp;
-
 import com.moya.inventory.domain.InventoryReport;
 import com.moya.inventory.repository.InventoryReportRepository;
 import com.moya.inventory.service.InventoryReportService;
 import com.moya.inventory.web.rest.errors.ExceptionTranslator;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

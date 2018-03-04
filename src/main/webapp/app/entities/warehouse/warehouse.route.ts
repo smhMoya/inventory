@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
-import { JhiPaginationUtil } from 'ng-jhipster';
+import {Injectable} from "@angular/core";
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes} from "@angular/router";
+import {JhiPaginationUtil} from "ng-jhipster";
 
-import { UserRouteAccessService } from '../../shared';
-import { WarehouseComponent } from './warehouse.component';
-import { WarehouseDetailComponent } from './warehouse-detail.component';
-import { WarehousePopupComponent } from './warehouse-dialog.component';
-import { WarehouseDeletePopupComponent } from './warehouse-delete-dialog.component';
+import {UserRouteAccessService} from "../../shared";
+import {WarehouseComponent} from "./warehouse.component";
+import {WarehouseDetailComponent} from "./warehouse-detail.component";
+import {WarehousePopupComponent} from "./warehouse-dialog.component";
+import {WarehouseDeletePopupComponent} from "./warehouse-delete-dialog.component";
 
 @Injectable()
 export class WarehouseResolvePagingParams implements Resolve<any> {
